@@ -1,32 +1,23 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react'
+// App.js
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Automobili from './pages/automobili';
+import DefaultLayout from './layouts/DefaultLayout';
+import HomePage from './pages/HomePage';
+import AutomobiliDetail from './components/AutomobiliDetail';
 
 function App() {
-  const [array, setArray] = useState([]);
-  const endPoint = ("http://127.0.0.1:8080/automobili/api");
-  const fetchAutomobili = () => {
-    axios.get(endPoint)
-      .then(res => {
-        console.log(res.data)
-        setArray(res.data)
-      })
-      .catch(err => {
-        console.log(err);
-      })
-  };
-
-  useEffect(fetchAutomobili, []);
-  return <div>
-    <div className='container'>
-      <ul>
-        {array.map((ele, index) => (
-          <li key={index}>{ele.modello}</li>
-        ))}
-
-      </ul>
-    </div>
-  </div>
-
+  return <>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<DefaultLayout />}>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/automobili' element={<Automobili />} />
+          <Route path='/automobili/:id' element={<AutomobiliDetail />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </>
 }
 
-export default App
+export default App;
+
