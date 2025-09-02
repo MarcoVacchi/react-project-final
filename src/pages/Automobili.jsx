@@ -20,7 +20,7 @@ export default function Automobili() {
 
     return <body className='bg-secondary'>
         <div className="container">
-            <h1 className="text-center mt-5 mb-5 p-5 text-light  rounded">
+            <h1 className="text-center mt-5 mb-5 p-5 text-light  rounded display-3 fw-bold mb-4">
                 Le nostre automobili!
             </h1>
 
