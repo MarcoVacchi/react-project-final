@@ -1,5 +1,5 @@
 export default function AutomobileInfo({ auto }) {
-    return (
+    return <>
         <div className="d-flex">
             <img
                 src={auto.immagine_url}
@@ -27,5 +27,5 @@ export default function AutomobileInfo({ auto }) {
                 )}
             </div>
         </div>
-    );
+    </>
 }

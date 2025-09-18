@@ -18,12 +18,12 @@ export default function AutomobileDetails() {
 
     if (!autoSelected) return <p className="text-center mt-5">Caricamento...</p>;
 
-    return (
+    return <>
         <div className='bg-secondary'>
             <div className="container mx-auto mb-5">
                 <AutomobileInfo auto={autoSelected} />
                 <RecensioniTabella recensioni={autoSelected.recensioni} />
             </div>
         </div>
-    );
+    </>
 }

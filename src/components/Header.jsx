@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function Header() {
-    return (
+    return <>
         <nav className="navbar navbar-expand-lg bg-dark mb-5">
             <div className="container-fluid">
                 <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
@@ -20,5 +20,5 @@ export default function Header() {
                 </div>
             </div>
         </nav>
-    );
+    </>
 }

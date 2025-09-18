@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function HomePage() {
-    return (
+    return <>
         <div className="homepage d-flex align-items-center justify-content-center text-light">
             <div className="text-center">
                 <h1 className="display-3 fw-bold mb-4">Benvenuto su AutoLux</h1>
@@ -14,5 +14,5 @@ export default function HomePage() {
                 </Link>
             </div>
         </div>
-    );
+    </>
 }

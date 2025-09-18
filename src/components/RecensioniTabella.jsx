@@ -1,5 +1,5 @@
 export default function RecensioniTable({ recensioni }) {
-    return (
+    return <>
         <div className="container mt-5 mb-5 bg-dark text-white">
             <table className="table table-dark">
                 <thead>
@@ -26,5 +26,5 @@ export default function RecensioniTable({ recensioni }) {
                 </tbody>
             </table>
         </div>
-    );
+    </>
 }
