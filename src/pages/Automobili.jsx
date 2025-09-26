@@ -18,7 +18,7 @@ export default function Automobili() {
             );
     }, []);
 
-    return <body className='bg-secondary'>
+    return <>
         <div className="container">
             <h1 className="text-center mt-5 mb-5 p-5 text-light  rounded display-3 fw-bold mb-4">
                 Le nostre automobili!
@@ -27,7 +27,7 @@ export default function Automobili() {
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mb-5">
                 {automobili.map(({ id, immagine_url, marca, modello, prezzo }) => (
                     <div className="col" key={id}>
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0 bg-dark-subtle">
                             <img
                                 src={immagine_url}
                                 className="card-img-top img-fluid"
@@ -51,6 +51,6 @@ export default function Automobili() {
                 ))}
             </div>
         </div>
-    </body>
+    </>
 
 }
