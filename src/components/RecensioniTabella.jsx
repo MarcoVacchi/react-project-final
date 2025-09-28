@@ -4,7 +4,6 @@ export default function RecensioniTable({ recensioni }) {
             <table className="table table-dark">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Descrizione</th>
                         <th>Valutazione</th>
                     </tr>
@@ -13,7 +12,6 @@ export default function RecensioniTable({ recensioni }) {
                     {recensioni && recensioni.length > 0 ? (
                         recensioni.map(({ id, descrizione, valutazione }) => (
                             <tr key={id}>
-                                <td>{id}</td>
                                 <td>{descrizione}</td>
                                 <td>{valutazione}</td>
                             </tr>
